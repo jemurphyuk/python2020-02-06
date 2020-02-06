@@ -20,9 +20,9 @@ print('Welcome to Fizz Buzz!!')
 print('Count up one from 0, typing fizz for multiples of three')
 print('and buzz for multiples of five. Type exit to stop the game')
 
-def fail_setting(count):
-    print(fail_code)
-    count = 0   # ----->> can we get this to work????????
+def fail_setting():
+    counter = 0
+    return fail_code  # ----->> can we get this to work????????
 
 
 while True:
@@ -32,10 +32,7 @@ while True:
         break
     elif user_number.lower().replace(" ", "") == 'fizzbuzz' and multiple15(counter):
         pass
-    elif word_fizz(user_number) and multiple15(counter):
-        print(fail_code)
-        counter = 0
-    elif word_buzz(user_number) and multiple15(counter):
+    elif (word_fizz(user_number) or word_buzz(user_number)) and multiple15(counter):
         print(fail_code)
         counter = 0
     elif word_fizz(user_number) and multiple3(counter):
@@ -45,10 +42,10 @@ while True:
     elif user_number >= 'A':
         print(fail_code)
         counter = 0
-    elif int(user_number) % 3 == 0 and multiple3(counter):
+    elif float(user_number) % 3 == 0 and multiple3(counter):
         print(fail_code)
         counter = 0
-    elif int(user_number) % 5 == 0 and multiple5(counter):
+    elif float(user_number) % 5 == 0 and multiple5(counter):
         print(fail_code)
         counter = 0
     elif user_number == str(counter):
