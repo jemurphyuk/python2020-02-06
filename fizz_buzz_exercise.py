@@ -1,5 +1,5 @@
 counter = 0
-fail_code = ('You moron!!! Oh well try again')
+fail_code = ('You moron!!! Oh well try again (Remember, type exit to quit)')
 print('Welcome to Fizz Buzz!!')
 print('Count up one from 0, typing fizz for multiples of three')
 print('and buzz for multiples of five. Type exit to stop the game')
@@ -21,7 +21,10 @@ while True:
         pass
     elif user_number.lower() == 'buzz' and counter % 5 == 0:
         pass
-    if int(user_number) % 3 == 0 and counter % 3 == 0:
+    elif user_number >= 'A':
+        print(fail_code)
+        counter = 0
+    elif int(user_number) % 3 == 0 and counter % 3 == 0:
         print(fail_code)
         counter = 0
     elif int(user_number) % 5 == 0 and counter % 5 == 0:
