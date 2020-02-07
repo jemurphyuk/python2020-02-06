@@ -21,9 +21,7 @@ print('Count up one from 0, typing fizz for multiples of three')
 print('and buzz for multiples of five. Type exit to stop the game')
 
 def fail_setting():
-    counter = 0
-    return fail_code  # ----->> can we get this to work????????
-
+    return [fail_code, 0]
 
 while True:
     user_number = input(f'The current number is {counter}, type the next number...    ')

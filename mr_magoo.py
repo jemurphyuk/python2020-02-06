@@ -12,7 +12,7 @@ while True:
         print("You are smart but not wise, please address me as Sensei")
     elif "?" in user_response:
         print('Questions are wise but for now wax on and off')
-    elif 'block' in user_response:  #---> doesn't appear to be working
+    elif 'block' in user_response:  
         print("Remember, best block, not to be there...")
     else:
         print("Don't lose focus, wax on and off")
