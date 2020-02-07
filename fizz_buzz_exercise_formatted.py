@@ -42,10 +42,10 @@ while True:
     elif user_number >= 'A':
         print(fail_code)
         counter = 0
-    elif float(user_number) % 3 == 0 and multiple3(counter):
+    elif multiple3(float(user_number)) and multiple3(counter):
         print(fail_code)
         counter = 0
-    elif float(user_number) % 5 == 0 and multiple5(counter):
+    elif multiple5(float(user_number)) and multiple5(counter):
         print(fail_code)
         counter = 0
     elif user_number == str(counter):
